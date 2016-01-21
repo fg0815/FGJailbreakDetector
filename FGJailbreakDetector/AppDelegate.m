@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  FGJailbreakDetector
 //
-//  Created by Jingwei Huang on 21/01/2016.
+//  Created by Feng Guo on 21/01/2016.
 //  Copyright © 2016 Feng Guo. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "FGJailbreakDetector.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    BOOL hasJailbroken = [FGJailbreakDetector hasJailbroken];
+    NSLog(hasJailbroken ? @"Jailbroken has been detected" : @"Jailbroken has not been detected");
+    
     return YES;
 }
 
